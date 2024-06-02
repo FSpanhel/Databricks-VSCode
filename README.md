@@ -33,7 +33,7 @@ The extensions can be downloaded from the official Visual Studio Code extension 
 - [Connection Manager](#connection-manager)
   - Easy configuration via standard VS Code settings
   - Manage and switch between multiple Databricks workspaces (e.g. DEV/TEST/PROD)
-  - Supports Azure Databricks, Databricks on AWS and Dtabricks on GCP
+  - Supports Azure Databricks, Databricks on AWS and Databricks on GCP
   - control how notebooks are downloaded (Jupyter notebook, source code, ...)
   - various other settings
   - Load Databricks directly from your Azure Account
@@ -251,7 +251,7 @@ As it is also possible to maintain Python libraries within DAtabricks using [Wor
 ## Execution Modes
 We distinguish between Live-execution and Offline-execution. In Live-execution mode, files are opened directly from Databricks by mounting the Databricks Workspace into your VSCode Workspace using `wsfs:/` URI scheme. In this mode there is no intermediate local copy but you work directly against the Databricks Workspace. Everything you run must already exist online in the Databricks Workspace.
 
-This is slightly different in Offline-execution where all files you want to work with need to be synced locally first using the [Workspace Manager](#workspace-manager). This is especially important when it comes `%run` which behaves slightly differntly compared to Live-execution mode. `%run` in Offline-execution runs the code from your local file instead of the code that exists in Dtabricks online!
+This is slightly different in Offline-execution where all files you want to work with need to be synced locally first using the [Workspace Manager](#workspace-manager). This is especially important when it comes `%run` which behaves slightly differntly compared to Live-execution mode. `%run` in Offline-execution runs the code from your local file instead of the code that exists in Databricks online!
 Other commands like `dbutils.notebook.run()` always use the code thats currently online so if you have changed the refernced notebook locally, you have to upload it first. This is simply because we cannot easily replicate the behavior of `dbutils.notebook.run()` locally!
 
 ## Supported Databricks Features
