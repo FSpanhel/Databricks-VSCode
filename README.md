@@ -246,7 +246,7 @@ To work with non-`.ipynb` notebooks, you can also open source files from Databri
 However, there are some technical restrictions working with those files. While they behave like notebooks, they are still just source files in the background which means, the output of executed cells is not persisted. So it can happen that if you save the notebook and it is then reloaded from the source (which can happen automatically in the background), your cell outputs are lost.
 Also, please make sure that the file extensions you configure here are the same as you configured in your `databricks.connection.default.exportFormats`!
 
-As it is also possible to maintain Python libraries within DAtabricks using [Workspace Files](https://docs.databricks.com/files/workspace.html) there is a clash between file extensions of workspace files and Python notebooks downloaded in source format hence there can be some issues when creating new files etc. Therefore it is recommended to keep using `.ipynb` format for Python notebooks and `.py` for workspace files used in libraries.
+As it is also possible to maintain Python libraries within Databricks using [Workspace Files](https://docs.databricks.com/files/workspace.html) there is a clash between file extensions of workspace files and Python notebooks downloaded in source format hence there can be some issues when creating new files etc. Therefore it is recommended to keep using `.ipynb` format for Python notebooks and `.py` for workspace files used in libraries.
 
 ## Execution Modes
 We distinguish between Live-execution and Offline-execution. In Live-execution mode, files are opened directly from Databricks by mounting the Databricks Workspace into your VSCode Workspace using `wsfs:/` URI scheme. In this mode there is no intermediate local copy but you work directly against the Databricks Workspace. Everything you run must already exist online in the Databricks Workspace.
@@ -279,7 +279,7 @@ You want to upload a local notebook to the Databricks workspace? Simply drag&dro
 You want to download a file from DBFS? Simply drag&drop it!
 
 There are two virtual file systems that come with this extension:
-- `wsfs:/` to access your notebook from the DAtabricks workspace
+- `wsfs:/` to access your notebook from the Databricks workspace
 - `dbws:/` (LEGACY) - to be replaced by `wsfs:/` in the long term
 - `dbfs:/` to access files on the Databricks File System (DBFS) - similar to the [DBFS Browser](#dbfs-browser)
 
